@@ -9,5 +9,4 @@ public class TriangleCalculatorApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TriangleCalculatorApplication.class, args);
 	}
-
 }
