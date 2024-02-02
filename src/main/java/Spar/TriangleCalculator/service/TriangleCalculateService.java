@@ -1,18 +1,16 @@
 package Spar.TriangleCalculator.service;
 
 import Spar.TriangleCalculator.dto.TriangleDto;
-import Spar.TriangleCalculator.validation.TriangleDataValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class TriangleService {
+public class TriangleCalculateService {
 
-    private final TriangleDataValidator triangleDataValidator;
+    private final TriangleDataService triangleDataService;
 
     public TriangleDto calculate(TriangleDto triangleDto) {
-        triangleDataValidator.validate(triangleDto);
-        return triangleDto;
+        return triangleDataService.completeTriangleData(triangleDto);
     }
 }

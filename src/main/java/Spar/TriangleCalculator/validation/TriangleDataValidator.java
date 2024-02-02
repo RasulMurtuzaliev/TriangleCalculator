@@ -39,17 +39,26 @@ public class TriangleDataValidator {
         throw new DataValidationException("You have not entered enough information to calculate the triangle.");
     }
 
-    private boolean isSSSCase(TriangleDto triangleDto) {
-        return triangleDto.getSideAB() != null && triangleDto.getSideBC() != null && triangleDto.getSideCA() != null;
+
+    public boolean isSSSCase(TriangleDto triangleDto) {
+        if (triangleDto.getSideAB() != null && triangleDto.getSideBC() != null && triangleDto.getSideCA() != null) {
+            if (!(triangleDto.getSideAB() + triangleDto.getSideBC() > triangleDto.getSideCA() &&
+                    triangleDto.getSideAB() + triangleDto.getSideCA() > triangleDto.getSideBC() &&
+                    triangleDto.getSideBC() + triangleDto.getSideCA() > triangleDto.getSideAB())) {
+                throw new DataValidationException("The sum of any two sides must be greater than the third side.");
+            }
+            return true;
+        }
+        return false;
     }
 
-    private boolean isSASCase(TriangleDto triangleDto) {
+    public boolean isSASCase(TriangleDto triangleDto) {
         return (triangleDto.getSideAB() != null && triangleDto.getSideBC() != null && triangleDto.getAngleB() != null) ||
                 (triangleDto.getSideAB() != null && triangleDto.getSideCA() != null && triangleDto.getAngleA() != null) ||
                 (triangleDto.getSideBC() != null && triangleDto.getSideCA() != null && triangleDto.getAngleC() != null);
     }
 
-    private boolean isASACase(TriangleDto triangleDto) {
+    public boolean isASACase(TriangleDto triangleDto) {
         int anglesCount = (triangleDto.getAngleA() != null ? 1 : 0) +
                 (triangleDto.getAngleB() != null ? 1 : 0) +
                 (triangleDto.getAngleC() != null ? 1 : 0);
