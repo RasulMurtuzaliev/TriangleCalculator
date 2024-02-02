@@ -7,15 +7,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @OpenAPIDefinition(
-		info = @Info(
-				title = "Triangle Calculator",
-				description = "Triangle Calculator API",
-				version = "1.0.0"
-		)
+        info = @Info(
+                title = "Triangle Calculator",
+                description = "Triangle Calculator API",
+                version = "1.0.0"
+        )
 )
 public class TriangleCalculatorApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TriangleCalculatorApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(TriangleCalculatorApplication.class, args);
+    }
 }
