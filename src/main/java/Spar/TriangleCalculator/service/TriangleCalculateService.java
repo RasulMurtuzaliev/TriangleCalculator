@@ -6,9 +6,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class TriangleService {
+public class TriangleCalculateService {
+
+    private final TriangleDataService triangleDataService;
 
     public TriangleDto calculate(TriangleDto triangleDto) {
-        return triangleDto;
+        return triangleDataService.completeTriangleData(triangleDto);
     }
 }
