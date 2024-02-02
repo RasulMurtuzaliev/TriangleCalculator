@@ -5,10 +5,10 @@ import lombok.Data;
 @Data
 public class TriangleDto {
 
-    private double sideAB;
-    private double sideBC;
-    private double sideCA;
-    private double angleA;
-    private double angleB;
-    private double angleC;
+    private Double sideAB;
+    private Double sideBC;
+    private Double sideCA;
+    private Double angleA;
+    private Double angleB;
+    private Double angleC;
 }
