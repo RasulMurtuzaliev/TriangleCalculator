@@ -12,8 +12,9 @@ public class TriangleCalculateDto {
     private double angleB;
     private double angleC;
 
-    private double area;
     private double perimeter;
+    private double area;
+
 
     private TriangleTypeBySides typeBySides;
     private TriangleTypeByAngles typeByAngles;

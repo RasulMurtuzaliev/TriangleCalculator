@@ -1,5 +1,6 @@
 package Spar.TriangleCalculator.controller;
 
+import Spar.TriangleCalculator.dto.TriangleCalculateDto;
 import Spar.TriangleCalculator.dto.TriangleDto;
 import Spar.TriangleCalculator.service.TriangleCalculateService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -19,7 +20,7 @@ public class TriangleController {
     private final TriangleCalculateService triangleService;
 
     @PostMapping("/calculate")
-    public TriangleDto calculate(@RequestBody @Validated TriangleDto triangleDto) {
+    public TriangleCalculateDto calculate(@RequestBody @Validated TriangleDto triangleDto) {
         return triangleService.calculate(triangleDto);
     }
 }
