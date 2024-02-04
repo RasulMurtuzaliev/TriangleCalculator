@@ -1,22 +1,46 @@
-# Getting Started
 
-### Reference Documentation
-For further reference, please consider the following sections:
+## Название проекта: <span style="font-weight: normal;">Triangle Calculator</span>
 
-* [Official Gradle documentation](https://docs.gradle.org)
-* [Spring Boot Gradle Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.2.2/gradle-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.2.2/gradle-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/3.2.2/reference/htmlsingle/index.html#web)
+## Описание проекта: <span style="font-weight: normal;"> 
+API для вычисления различных параметров треугольника на основе заданных сторон и углов. 
 
-### Guides
-The following guides illustrate how to use some features concretely:
+Для начала вычислений требуется минимальный набор данных о треугольнике, который может быть представлен в одном из следующих форматов:
+* SSS (Side-Side-Side): Вводятся длины всех трех сторон треугольника. 
+Это наиболее прямой способ определения треугольника, позволяющий вычислить все его углы и другие характеристики.
+* SAS (Side-Angle-Side): Вводятся длины двух сторон и угол между ними. 
+Этот метод позволяет однозначно определить треугольник и рассчитать все неизвестные параметры, включая третью сторону.
+* ASA (Angle-Side-Angle): Вводятся два угла и длина стороны между ними. 
+Этот подход также однозначно определяет треугольник, позволяя вычислить длины остальных сторон и оставшийся угол.
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+Поддерживается вычисление:
+* Периметра
+* Площади
+* Типа треугольника по сторонам (равносторонний, равнобедренный, разносторонний) и углам (остроугольный, тупоугольный, прямоугольный)
+* Длин медиан, биссектрис и высот
+* Площадей вписанной и описанной окружностей
+* Тригонометрических функций углов (синус, косинус, тангенс)
 
-### Additional Links
-These additional references should also help you:
+## Ключевые компоненты:
 
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
+* TriangleDto: DTO для входных данных треугольника.
+* TriangleCalculateDto: DTO для результатов вычислений.
+* TriangleController: Контроллер, обрабатывающий HTTP запросы к API.
+* TriangleDataValidator: Валидатор входных данных.
+* TriangleDataService: Сервис, выполняющий вычисления базовых параметров треугольника.
+* TriangleCalculateService: Сервис, выполняющий все вычисления.
 
+## Технологии:
+
+* Spring Boot для создания RESTful API.
+* Lombok для минимизации бойлерплейта.
+* MapStruct для маппинга между DTO.
+* JUnit 5 для юнит тестирования.
+
+## Запуск приложения:
+1) Убедитесь, что у вас установлена Java 11 или выше.
+2) Склонируйте репозиторий с помощью следующей команды: **git clone https://github.com/RasulMurtuzaliev/TriangleCalculator.git**
+3) Перейдите в каталог проекта и запустите приложение: 
+* Если у вас установлен Gradle, используйте команду **gradle bootRun** для запуска приложения.
+* Если Gradle не установлен, но в вашем проекте есть Gradle Wrapper, используйте команду **./gradlew bootRun** на Mac/Linux 
+или **gradlew.bat bootRun** на Windows.
+4) Далее приложение будет доступно через Swagger: **http://localhost:8080/swagger-ui/index.html?#/**
