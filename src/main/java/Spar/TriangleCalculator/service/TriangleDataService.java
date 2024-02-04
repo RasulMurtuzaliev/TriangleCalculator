@@ -33,6 +33,10 @@ public class TriangleDataService {
         double angleB = Math.toDegrees(Math.acos((ab * ab + bc * bc - ca * ca) / (2 * ab * bc)));
         double angleC = Math.toDegrees(Math.acos((bc * bc + ca * ca - ab * ab) / (2 * bc * ca)));
 
+        angleA = (double) Math.round(angleA);
+        angleB = (double) Math.round(angleB);
+        angleC = (double) Math.round(angleC);
+
         triangleDto.setAngleA(angleA);
         triangleDto.setAngleB(angleB);
         triangleDto.setAngleC(angleC);

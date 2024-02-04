@@ -1,8 +1,10 @@
 package Spar.TriangleCalculator.dto;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class TriangleCalculateDto {
 
     private double sideAB;
@@ -12,8 +14,9 @@ public class TriangleCalculateDto {
     private double angleB;
     private double angleC;
 
-    private double area;
     private double perimeter;
+    private double area;
+
 
     private TriangleTypeBySides typeBySides;
     private TriangleTypeByAngles typeByAngles;
