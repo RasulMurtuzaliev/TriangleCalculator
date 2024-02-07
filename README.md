@@ -22,12 +22,12 @@ API для вычисления различных параметров треу
 
 ## Ключевые компоненты:
 
-* TriangleDto: DTO для входных данных треугольника.
-* TriangleCalculateDto: DTO для результатов вычислений.
-* TriangleController: Контроллер, обрабатывающий HTTP запросы к API.
-* TriangleDataValidator: Валидатор входных данных.
-* TriangleDataService: Сервис, выполняющий вычисления базовых параметров треугольника.
-* TriangleCalculateService: Сервис, выполняющий все вычисления.
+* [TriangleDto](https://github.com/RasulMurtuzaliev/TriangleCalculator/blob/main/src/main/java/Spar/TriangleCalculator/dto/TriangleDto.java): DTO для входных данных треугольника.
+* [TriangleCalculateDto](https://github.com/RasulMurtuzaliev/TriangleCalculator/blob/main/src/main/java/Spar/TriangleCalculator/dto/TriangleCalculateDto.java): DTO для результатов вычислений.
+* [TriangleController](https://github.com/RasulMurtuzaliev/TriangleCalculator/blob/main/src/main/java/Spar/TriangleCalculator/controller/TriangleController.java): Контроллер, обрабатывающий HTTP запросы к API.
+* [TriangleDataValidator](https://github.com/RasulMurtuzaliev/TriangleCalculator/blob/main/src/main/java/Spar/TriangleCalculator/validation/TriangleDataValidator.java): Валидатор входных данных.
+* [TriangleDataService](https://github.com/RasulMurtuzaliev/TriangleCalculator/blob/main/src/main/java/Spar/TriangleCalculator/service/TriangleDataService.java): Сервис, выполняющий вычисления базовых параметров треугольника.
+* [TriangleCalculateService](https://github.com/RasulMurtuzaliev/TriangleCalculator/blob/main/src/main/java/Spar/TriangleCalculator/service/TriangleCalculateService.java): Сервис, выполняющий все вычисления.
 
 ## Технологии:
 
