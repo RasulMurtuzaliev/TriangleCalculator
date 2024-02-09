@@ -44,6 +44,10 @@ dependencies {
 
 }
 
+bootBuildImage {
+	imageName = "trianglecalculator:latest"
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
